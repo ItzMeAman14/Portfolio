@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 
@@ -46,7 +45,6 @@ const Navbar = () => {
             Aman Rehman
           </motion.span>
 
-
           <div className="hidden md:block">
             <div className="flex items-center space-x-4">
               {navItems.map((item, index) => (
@@ -93,7 +91,10 @@ const Navbar = () => {
           opacity: isMobileMenuOpen ? 1 : 0,
           height: isMobileMenuOpen ? "auto" : 0,
         }}
-        className="md:hidden bg-background/95 backdrop-blur-md"
+        transition={{ duration: 0.3 }}
+        className={`md:hidden bg-background/95 backdrop-blur-md ${
+          isMobileMenuOpen ? "pointer-events-auto" : "pointer-events-none"
+        }`}
       >
         <div className="px-2 pt-2 pb-3 space-y-1">
           {navItems.map((item) => (

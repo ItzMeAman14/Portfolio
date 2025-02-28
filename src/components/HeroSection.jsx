@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 
 const HeroSection = () => {
@@ -39,12 +38,20 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.8 }}
+          className="flex justify-center gap-4"
         >
           <a
             href="#projects"
             className="bg-primary text-white px-8 py-3 rounded-lg inline-block hover:bg-secondary transition-colors duration-300"
           >
             View My Work
+          </a>
+          <a
+            href="/aman-resume.pdf"
+            download
+            className="bg-primary text-white px-8 py-3 rounded-lg inline-block hover:bg-secondary transition-colors duration-300"
+          >
+            Download Resume
           </a>
         </motion.div>
       </div>
