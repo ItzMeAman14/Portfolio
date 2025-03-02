@@ -71,7 +71,6 @@ const ProjectsSection = () => {
                   {project.description}
                 </p>
 
-
                 <div className="flex flex-wrap gap-2">
                   {project.tags.map((tag) => (
                     <span
@@ -82,8 +81,27 @@ const ProjectsSection = () => {
                     </span>
                   ))}
                 </div>
-                <a className="text-gray-600 mb-4 mx-1 dark:text-gray-300" href={project.url} target="_blank">
-                  Click here to Checkout the project
+                <a
+                  className="text-gray-600 mb-4 mx-1 dark:text-gray-300 mt-2 inline-flex items-center"
+                  href={project.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  View Project
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="w-4 h-4 ml-2"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    strokeWidth="2"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M5 12h14M12 5l7 7-7 7"
+                    />
+                  </svg>
                 </a>
               </div>
             </motion.div>

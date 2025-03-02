@@ -1,20 +1,48 @@
 import { motion } from "framer-motion";
+import { FaReact, FaHtml5, FaCss3Alt, FaNodeJs, FaJsSquare, FaBootstrap, FaGitAlt, FaGithub, FaJava } from "react-icons/fa"; // Font Awesome icons
+import { DiPython, DiMongodb } from "react-icons/di";
+import { GiDatabase } from "react-icons/gi";
+import { PiFileCpp } from "react-icons/pi";
+import { SiMui,SiExpress, SiFlask, SiJupyter, SiLibrarything } from "react-icons/si";
+import { TbSettingsSearch } from "react-icons/tb";
 
 const technologies = [
   {
     category: "Frontend",
-    skills: ["React", "HTML", "CSS", "JavaScript", "Bootstrap", "MUI"],
+    skills: [
+      { name: "React", icon: <FaReact /> },
+      { name: "HTML", icon: <FaHtml5 /> },
+      { name: "CSS", icon: <FaCss3Alt /> },
+      { name: "JavaScript", icon: <FaJsSquare /> },
+      { name: "Bootstrap", icon: <FaBootstrap /> },
+      { name: "MUI", icon: <SiMui /> }, 
+    ],
   },
   {
     category: "Backend",
-    skills: ["Node.js", "Express.js", "Python", "Flask", "Java", "C++", "C", "MongoDB", "SQL Alchemy"],
+    skills: [
+      { name: "Node.js", icon: <FaNodeJs /> },
+      { name: "Express.js", icon: <SiExpress /> },
+      { name: "Python", icon: <DiPython /> },
+      { name: "Flask", icon: <SiFlask /> }, 
+      { name: "Java", icon: <FaJava /> }, 
+      { name: "C++", icon: <PiFileCpp /> },
+      { name: "MongoDB", icon: <DiMongodb /> },
+      { name: "SQL Alchemy", icon: <GiDatabase /> },
+    ],
   },
   {
     category: "Tools & Others",
-    skills: ["Git", "SEO", "UUID", "Nodemailer", "Github", "Jupyter Notebook"],
+    skills: [
+      { name: "Git", icon: <FaGitAlt /> },
+      { name: "SEO", icon: <TbSettingsSearch /> }, 
+      { name: "UUID", icon: <SiLibrarything /> },
+      { name: "Nodemailer", icon: <SiLibrarything /> },
+      { name: "Github", icon: <FaGithub /> },
+      { name: "Jupyter Notebook", icon: <SiJupyter /> },
+    ],
   },
 ];
-
 
 const TechnologiesSection = () => {
   return (
@@ -48,13 +76,14 @@ const TechnologiesSection = () => {
               </h3>
               <div className="flex flex-wrap gap-2 justify-center">
                 {tech.skills.map((skill) => (
-                  <motion.span
-                    key={skill}
+                  <motion.div
+                    key={skill.name}
                     whileHover={{ scale: 1.05 }}
-                    className="bg-primary/10 text-primary dark:bg-primary/20 dark:text-primary px-3 py-1 rounded-full text-sm"
+                    className="flex items-center bg-primary/10 text-primary dark:bg-primary/20 dark:text-primary px-3 py-1 rounded-full text-m"
                   >
-                    {skill}
-                  </motion.span>
+                    <span className="mr-2">{skill.icon}</span>
+                    {skill.name}
+                  </motion.div>
                 ))}
               </div>
             </motion.div>
