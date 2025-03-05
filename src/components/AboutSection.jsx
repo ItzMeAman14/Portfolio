@@ -16,7 +16,7 @@ const AboutSection = () => {
           </h2>
           <div className="w-20 h-1 bg-primary mx-auto rounded-full mb-8" />
         </motion.div>
-        
+
         <div className="grid grid-cols-1 lg:grid-cols-[300px_1fr]">
           {/* Image Section */}
           <motion.div
@@ -26,9 +26,9 @@ const AboutSection = () => {
             viewport={{ once: true }}
             className="w-full flex justify-center"
           >
-            
+
             <motion.div
-              className="w-[300px] h-[300px] lg:w-[400px] lg:h-[400px] xl:w-[400px] xl:h-[400px] rounded-lg overflow-hidden"
+              className="w-[300px] h-[500px] lg:w-[400px] lg:h-[500px] xl:w-[400px] xl:h-[500px] rounded-lg overflow-hidden"
             >
               <motion.img
                 src="/aman-image.jpg"
@@ -46,7 +46,7 @@ const AboutSection = () => {
             viewport={{ once: true }}
             className="w-full lg:pl-8 text-justify"
           >
-            <h3 className="text-xl font-semibold mb-3 text-black dark:text-white">
+            <h3 className="text-xl font-semibold mb-3 text-black dark:text-white lg:text-left lg:mt-0 text-center mt-4">
               Full Stack Developer
             </h3>
             <p className="text-gray-600 dark:text-gray-300">
@@ -59,6 +59,7 @@ const AboutSection = () => {
               As a Full Stack Developer, I bridge the gap between front-end and back-end, ensuring that both sides of the application work seamlessly together. I integrate APIs, handle data flow between the server and the client, and manage authentication and authorization to ensure secure communication across the application.
             </p>
           </motion.div>
+
         </div>
       </div>
     </section>
